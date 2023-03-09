@@ -42,8 +42,8 @@ class _LoginScreenState extends State<LoginScreen> {
 
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Phone Verification',style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Colors.black)),
-                Text('you need to register your phone before getting started',style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold,color: Colors.black),textAlign: TextAlign.center,),
+                Text('Phone Verification',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: Colors.white)),
+                Text('you need to register your phone before getting started',style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold,color: Colors.white),textAlign: TextAlign.center,),
                 SizedBox(
                   height: 20,
                 ),
@@ -92,7 +92,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10.0)
                           ),
-                          primary: Colors.purple
+                          primary: Colors.indigo
                       ),
                       onPressed: ()
                   {

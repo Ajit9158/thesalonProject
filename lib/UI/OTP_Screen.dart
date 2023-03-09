@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
+import 'package:salon/UI/personal_info.dart';
 
 class OtpScreen extends StatefulWidget {
   const OtpScreen({Key? key}) : super(key: key);
@@ -54,11 +55,11 @@ class _OtpScreenState extends State<OtpScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Verification Code',style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Colors.black)),
+              Text('Verification Code',style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Colors.white)),
               SizedBox(
                 height: 10,
               ),
-              Text('We have sent the verification to youe Number',style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold,color: Colors.black)),
+              Text('We have sent the verification to youe Number',style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold,color: Colors.white)),
               SizedBox(
                 height: 20,
               ),
@@ -82,14 +83,15 @@ class _OtpScreenState extends State<OtpScreen> {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10.0)
                         ),
-                        primary: Colors.purple
+                        primary: Colors.indigo
                     ),
+
                     onPressed: ()
                     {
                       print("button pressed");
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const OtpScreen()),
+                        MaterialPageRoute(builder: (context) => const Personalinfo()),
                       );
 
                     },
