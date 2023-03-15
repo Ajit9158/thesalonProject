@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
 import 'package:salon/UI/personal_info.dart';
 
+import '../services/createuser.dart';
+
 class OtpScreen extends StatefulWidget {
   const OtpScreen({Key? key}) : super(key: key);
 
@@ -10,6 +12,7 @@ class OtpScreen extends StatefulWidget {
 }
 
 class _OtpScreenState extends State<OtpScreen> {
+  var otp =TextEditingController();
   @override
   Widget build(BuildContext context) {
     final defaultPinTheme = PinTheme(
@@ -34,6 +37,7 @@ class _OtpScreenState extends State<OtpScreen> {
     );
 
     return Scaffold(
+      backgroundColor: Colors.blueGrey,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -59,11 +63,12 @@ class _OtpScreenState extends State<OtpScreen> {
               SizedBox(
                 height: 10,
               ),
-              Text('We have sent the verification to youe Number',style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold,color: Colors.white)),
+              Text('We have sent the verification to youe Number',style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold,color: Colors.white),textAlign: TextAlign.center),
               SizedBox(
-                height: 20,
+                height: 100,
               ),
           Pinput(
+            controller: otp,
             validator: (s) {
               return s == '2222' ? null : 'Pin is incorrect';
             },
@@ -75,7 +80,7 @@ class _OtpScreenState extends State<OtpScreen> {
                 height: 20,
               ),
               Container(
-                width: double.infinity,
+                //width: double.infinity,
                 child: ElevatedButton(
 
                     style: ElevatedButton.styleFrom(
@@ -83,16 +88,25 @@ class _OtpScreenState extends State<OtpScreen> {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10.0)
                         ),
-                        primary: Colors.indigo
+                        primary: Color(0xff201d43),
                     ),
 
                     onPressed: ()
                     {
-                      print("button pressed");
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const Personalinfo()),
-                      );
+                      //print("button pressed");
+
+                      var Otp=otp.text.toString();
+                      if(Otp=='2222')
+                        {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => const CreateUser()),
+                          );
+                        }
+                      else
+                        {
+
+                        }
 
                     },
                     child: Text('Verify Phone Number',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.white))

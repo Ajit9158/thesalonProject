@@ -12,9 +12,10 @@ class _FirstPageState extends State<FirstPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blueGrey,
         appBar: AppBar(
           backgroundColor: Colors.transparent,
-          title: Text('Smart Salon', style: TextStyle(color: Colors.black)),
+          title: Text('Smart Salon', style: TextStyle(color: Colors.white)),
         ),
         body: Center(
           child: SingleChildScrollView(
@@ -22,14 +23,6 @@ class _FirstPageState extends State<FirstPage> {
               margin: EdgeInsets.only(left: 30, right: 30),
               child: Column(
                 children: [
-                  Text('Smart Salon',
-                      style: TextStyle(
-                          fontSize: 40,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white)),
-                  SizedBox(
-                    height:20
-                  ),
                   Container(
                       child: Container(
                     height: 150,
@@ -39,18 +32,23 @@ class _FirstPageState extends State<FirstPage> {
                     ),
                   )),
                   SizedBox(
-                      height:20
+                      height:5
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                  Text('Smart Salon',
+                      style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black)),
+                  SizedBox(
+                      height:100
+                  ),
                       ElevatedButton(
                           style: ElevatedButton.styleFrom(
                               padding: EdgeInsets.symmetric(
                                   horizontal: 120.0, vertical: 10.0),
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10.0)),
-                              primary: Colors.indigo),
+                              primary: Color(0xff201d43)),
                           onPressed: () {
                             Navigator.push(
                               context,
@@ -64,22 +62,8 @@ class _FirstPageState extends State<FirstPage> {
                           )
                       ),
 
-                    ],
-                  ),
-                  SizedBox(
-                    height: 2,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Text('   New user then',
-                          style: TextStyle(
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold,
-                          )),
-                      TextButton(onPressed: () {}, child: Text("SignUp"))
-                    ],
-                  )
+
+
                 ],
               ),
             ),

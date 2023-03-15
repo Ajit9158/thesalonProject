@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:salon/UI/Home_page.dart';
 
 
     class Personalinfo extends StatefulWidget {
@@ -12,44 +13,232 @@ import 'package:flutter/material.dart';
       @override
       Widget build(BuildContext context) {
         return Scaffold(
+
+          backgroundColor: Colors.blueGrey,
+          //extendBodyBehindAppBar: true,
           appBar: AppBar(
-            title: Text("Personalinfo"),
+            backgroundColor: Colors.transparent,
+            title: Text('Personal Information', style: TextStyle(color: Colors.white)),
+           //elevation: 0,
+            leading: IconButton(
+               onPressed: (){
+                 Navigator.pop(context);
+              },
+               icon: Icon(
+                Icons.arrow_back,
+                 color: Colors.black,
+               ),
+             ),
+
           ),
-          body: Column(
-            children: [
-              Container(
-                decoration: BoxDecoration(border: Border.all(width: 2,color: Colors.blueGrey),
-                    borderRadius: BorderRadius.circular(10)),
-                height: 55,
-                child: Row(
-                  //mainAxisAlignment: MainAxisAlignment.center,
+          body: SingleChildScrollView(
+            child: Container(
+               // margin: EdgeInsets.only(top: 100),
+              child: Center(
+                child: Column(
+
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    SizedBox(
-                      width: 30,
-                      child: TextField(
-                        decoration: InputDecoration(border: InputBorder.none),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        //margin: EdgeInsets.only(left: 30,right: 30),
+                        width: double.infinity,
+                        child: TextField(
+
+                          decoration: InputDecoration(
+                              hintText: 'Enter first name',
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(11),
+                              borderSide: BorderSide(
+                                  color: Colors.black45,
+                                  width: 2
+                              ),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(11),
+                                borderSide: BorderSide(
+                                    color: Colors.grey,
+                                    width: 2
+                                )
+                            ),
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(11),
+                                borderSide: BorderSide(
+                                    color: Colors.grey
+                                )
+
+                            ),
+                          ),
+                        ),
                       ),
                     ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    SizedBox(
-                        width: 10
-
-                    ),
-                    Text('|',style: TextStyle(fontSize: 35,color: Colors.grey),),
-                    Expanded(
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        //margin: EdgeInsets.only(left: 30,right: 30),
+                        width: double.infinity,
                         child: TextField(
-                          keyboardType: TextInputType.number,
-                          decoration: InputDecoration(border: InputBorder.none,hintText: 'Phone'),
 
-                        )),
+                          decoration: InputDecoration(
+                            hintText: 'Enter middle name',
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(11),
+                              borderSide: BorderSide(
+                                  color: Colors.black45,
+                                  width: 2
+                              ),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(11),
+                                borderSide: BorderSide(
+                                    color: Colors.grey,
+                                    width: 2
+                                )
+                            ),
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(11),
+                                borderSide: BorderSide(
+                                    color: Colors.grey
+                                )
 
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        //margin: EdgeInsets.only(left: 30,right: 30),
+                        width: double.infinity,
+                        child: TextField(
+
+                          decoration: InputDecoration(
+                            hintText: 'Enter last name',
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(11),
+                              borderSide: BorderSide(
+                                  color: Colors.black45,
+                                  width: 2
+                              ),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(11),
+                                borderSide: BorderSide(
+                                    color: Colors.grey,
+                                    width: 2
+                                )
+                            ),
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(11),
+                                borderSide: BorderSide(
+                                    color: Colors.grey
+                                )
+
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        //margin: EdgeInsets.only(left: 30,right: 30),
+                        width: double.infinity,
+                        child: TextField(
+
+                          decoration: InputDecoration(
+                            hintText: 'Enter address name',
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(11),
+                              borderSide: BorderSide(
+                                  color: Colors.black45,
+                                  width: 2
+                              ),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(11),
+                                borderSide: BorderSide(
+                                    color: Colors.grey,
+                                    width: 2
+                                )
+                            ),
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(11),
+                                borderSide: BorderSide(
+                                    color: Colors.grey
+                                )
+
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        //margin: EdgeInsets.only(left: 30,right: 30),
+                        width: double.infinity,
+                        child: TextField(
+
+                          decoration: InputDecoration(
+                            hintText: 'Enter your E-mail',
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(11),
+                              borderSide: BorderSide(
+                                  color: Colors.black45,
+                                  width: 2
+                              ),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(11),
+                                borderSide: BorderSide(
+                                    color: Colors.grey,
+                                    width: 2
+                                )
+                            ),
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(11),
+                                borderSide: BorderSide(
+                                    color: Colors.grey
+                                )
+
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      //width: double.infinity,
+                      child: ElevatedButton(
+
+                          style: ElevatedButton.styleFrom(
+                            padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 10.0),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10.0)
+                            ),
+                            primary: Color(0xff201d43),
+                          ),
+
+                          onPressed: ()
+                          {
+                            print("button pressed");
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => const Homepage()),
+                            );
+
+                          },
+                          child: Text('Save',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.white))
+
+                      ),
+                    ),
                   ],
                 ),
               ),
-            ],
-          )
+            ),
+          ),
 
         );
       }
