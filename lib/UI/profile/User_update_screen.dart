@@ -139,7 +139,7 @@ class UpdateProfileScreen extends StatelessWidget {
                               backgroundColor: Color(0xff201d43),
                               side: BorderSide.none,
                               shape: const StadiumBorder()),
-                          child: const Text('Edit Profile', style: TextStyle(color: Colors.white)),
+                          child: const Text('Update Profile', style: TextStyle(color: Colors.white)),
                         ),
                       ),
                     ],

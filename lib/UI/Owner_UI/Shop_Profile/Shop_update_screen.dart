@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 
-import 'O_profile_screen.dart';
+import 'Shop_profile_screen.dart';
 
-class UpdateOwnerProfileScreen extends StatelessWidget {
-  const UpdateOwnerProfileScreen({Key? key}) : super(key: key);
+class UpdateShopProfileScreen extends StatelessWidget {
+  const UpdateShopProfileScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +52,7 @@ class UpdateOwnerProfileScreen extends StatelessWidget {
                       TextFormField(
 
                         decoration: const InputDecoration(
-                            label: Text('Full Name'), prefixIcon: Icon(LineAwesomeIcons.user),
+                            label: Text('Shop Name'), prefixIcon: Icon(LineAwesomeIcons.user),
                              enabledBorder: OutlineInputBorder(
                                borderSide: BorderSide(
                                    color: Colors.black12,
@@ -129,14 +129,14 @@ class UpdateOwnerProfileScreen extends StatelessWidget {
                           onPressed: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => const OwnerProfileScreen()),
+                              MaterialPageRoute(builder: (context) => const ShopProfileScreen()),
                             );
                           },
                           style: ElevatedButton.styleFrom(
                               backgroundColor: Color(0xff201d43),
                               side: BorderSide.none,
                               shape: const StadiumBorder()),
-                          child: const Text('Update Profile', style: TextStyle(color: Colors.white)),
+                          child: const Text('Update Shop Profile', style: TextStyle(color: Colors.white)),
                         ),
                       ),
                     ],

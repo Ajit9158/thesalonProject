@@ -4,13 +4,11 @@ import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 import 'package:salon/UI/Owner_UI/O_Home_Page.dart';
 import 'package:salon/UI/profile/User_update_screen.dart';
 
-import '../../../services/createshop.dart';
-import '../Shop_Profile/Shop_profile_screen.dart';
-
-import 'O_menu.dart';
-import 'O_update_screen.dart';
-class OwnerProfileScreen extends StatelessWidget {
-  const OwnerProfileScreen({Key? key}) : super(key: key);
+import '../O_profile/O_menu.dart';
+import 'Shop_menu.dart';
+import 'Shop_update_screen.dart';
+class ShopProfileScreen extends StatelessWidget {
+  const ShopProfileScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +54,7 @@ class OwnerProfileScreen extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 10),
-                Text('Ajit Jadhav', style: Theme.of(context).textTheme.headline4),
+                Text('The Smart Salon', style: Theme.of(context).textTheme.headline4),
                 Text('Owner', style: Theme.of(context).textTheme.bodyText2),
                 const SizedBox(height: 20),
 
@@ -68,38 +66,24 @@ class OwnerProfileScreen extends StatelessWidget {
                   {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const UpdateOwnerProfileScreen()),
+                      MaterialPageRoute(builder: (context) => const UpdateShopProfileScreen()),
                     );
                   },
                     style: ElevatedButton.styleFrom(
                         backgroundColor:Color(0xff201d43), side: BorderSide.none, shape: const StadiumBorder()),
-                    child: const Text('Edit Prifile', style: TextStyle(color:  Colors.white)),
+                    child: const Text('Edit Shop Prifile', style: TextStyle(color:  Colors.white)),
                   ),
                 ),
                 const SizedBox(height: 30),
                 const Divider(),
                 const SizedBox(height: 10),
-                OwnerProfileMenuWidget(title: "Shop profile", icon: LineAwesomeIcons.info, onPress: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const ShopProfileScreen()),
-                  );
+                OwnerProfileMenuWidget(title: "Employee Information", icon: LineAwesomeIcons.info, onPress: () {}),
+                OwnerProfileMenuWidget(title: "Bills", icon: LineAwesomeIcons.wallet, onPress: () {}),
+                OwnerProfileMenuWidget(title: "Shop Photos", icon: LineAwesomeIcons.photo_video, onPress: () {}),
+                OwnerProfileMenuWidget(title: "Shop Reviews", icon: LineAwesomeIcons.rev_io, onPress: () {}),
+                OwnerProfileMenuWidget(title: "Appoinments History", icon: LineAwesomeIcons.history, onPress: () {}),
 
-                }),
 
-                /// -- MENU
-                OwnerProfileMenuWidget(title: "Settings", icon: LineAwesomeIcons.cog, onPress: () {}),
-                OwnerProfileMenuWidget(title: "History", icon: LineAwesomeIcons.wallet, onPress: () {
-                }),
-                const Divider(),
-                const SizedBox(height: 10),
-                OwnerProfileMenuWidget(title: "Help", icon: LineAwesomeIcons.helping_hands, onPress: () {}),
-                OwnerProfileMenuWidget(
-                    title: "Logout",
-                    icon: LineAwesomeIcons.alternate_sign_out,
-                    textColor: Colors.red,
-                    endIcon: false,
-                    onPress: () {}),
               ],
             ),
           ),
