@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:salon/UI/profile/profile_screen.dart';
+import 'package:salon/UI/profile/User_profile_screen.dart';
 
+import 'Shop_Display_pages/one_shop_info.dart';
 import 'firstPage.dart';
 
 class Homepage extends StatefulWidget {
@@ -17,7 +18,7 @@ class _HomepageState extends State<Homepage> {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.blueGrey,
-        extendBodyBehindAppBar: true,
+        //extendBodyBehindAppBar: true,
         bottomNavigationBar: Container(
           color: Color(0xff201d43),
           child: Padding(
@@ -76,7 +77,97 @@ class _HomepageState extends State<Homepage> {
               ),
            )
         ),
-      //  body:
+       body:
+          Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: 50,
+                  //margin: EdgeInsets.only(left: 30,right: 30),
+                  width: double.infinity,
+                  child: TextField(
+
+                    decoration: InputDecoration(
+                      prefixIcon: const Icon(Icons.search),
+                      hintText: 'Search',
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(11),
+                        borderSide: BorderSide(
+                            color: Colors.black45,
+                            width: 2
+
+                        ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(11),
+                          borderSide: BorderSide(
+                              color: Colors.grey,
+                              width: 2
+                          )
+                      ),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(11),
+                          borderSide: BorderSide(
+                              color: Colors.grey
+                          )
+
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Divider(
+                thickness: 2,
+              ),
+
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ListView.separated(itemBuilder: (context,index)
+                  {
+                    return InkWell(
+                      onTap: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const ShopInfo()),
+                        );
+                      },
+                      child: ListTile(
+                        leading:Container(
+                          height: 60,
+                          width: 60,
+
+                          decoration: BoxDecoration(
+                              color: Colors.pink,
+                              borderRadius: BorderRadius.circular(30),
+                              border: Border.all(
+                                width: 2,
+
+
+                              )
+                          ),
+                        ),
+                        title:Text('Shop Name' ),
+                        subtitle: Text('Location'),
+                        trailing: Text('Status'),
+
+
+                      ),
+                    );
+
+                  },
+                    itemCount: 20,
+                    separatorBuilder: (context,index){
+                      return Divider(height: 50,thickness: 10,);
+                    },
+                  ),
+                ),
+              )
+
+            ],
+          ),
+
 
       ),
     );

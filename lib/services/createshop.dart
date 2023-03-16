@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 
 import '../ApiCalls/ApiCalls.dart';
+import '../UI/Owner_UI/O_Home_Page.dart';
 import '../model/shop.dart';
 
 
@@ -302,6 +303,11 @@ class _CreateState extends State<Create> {
                             isClicked = true;
                           });
                         }
+                              Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => const Owner()),
+                              );
+
                       },
                       style: ButtonStyle(
                           shape:

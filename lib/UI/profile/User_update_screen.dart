@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 
+import 'User_profile_screen.dart';
+import 'User_profile_screen.dart';
+import 'User_profile_screen.dart';
+
 class UpdateProfileScreen extends StatelessWidget {
   const UpdateProfileScreen({Key? key}) : super(key: key);
 
@@ -127,10 +131,11 @@ class UpdateProfileScreen extends StatelessWidget {
                           onPressed: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => const UpdateProfileScreen()),
+                              MaterialPageRoute(builder: (context) => const ProfileScreen()),
                             );
                           },
                           style: ElevatedButton.styleFrom(
+
                               backgroundColor: Color(0xff201d43),
                               side: BorderSide.none,
                               shape: const StadiumBorder()),

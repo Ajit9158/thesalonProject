@@ -33,6 +33,7 @@ class _CreateState extends State<CreateUser> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
+     // backgroundColor: Colors.blueGrey,
     //  backgroundColor: Colors.white,
      // extendBodyBehindAppBar: true,
       // backgroundColor: Colors.gr,
@@ -64,8 +65,8 @@ class _CreateState extends State<CreateUser> {
                       },
                       controller: firstNameController,
                       decoration: InputDecoration(
-                          labelText: "Enter your First Name",
-                          hintText: "Enter First Name",
+                          labelText: "First Name",
+                          hintText: "First Name",
                           focusedBorder: OutlineInputBorder(
                               borderRadius:
                                   BorderRadius.all(Radius.elliptical(5, 5)))),
@@ -81,8 +82,8 @@ class _CreateState extends State<CreateUser> {
                       },
                       controller: lastNameController,
                       decoration: InputDecoration(
-                          labelText: "Enter your  Last Name",
-                          hintText: "Enter Last Name",
+                          labelText: "Last Name",
+                          hintText: "Last Name",
                           focusedBorder: OutlineInputBorder(
                               borderRadius:
                                   BorderRadius.all(Radius.elliptical(5, 5)))),
@@ -101,8 +102,8 @@ class _CreateState extends State<CreateUser> {
                           // enabledBorder: OutlineInputBorder(
                           //     borderRadius:
                           //         BorderRadius.all(Radius.circular(10))),
-                          labelText: "Enter your Email ",
-                          hintText: "Enter Email",
+                          labelText: " Email ",
+                          hintText: "Email",
                           focusedBorder: OutlineInputBorder(
                               borderRadius:
                                   BorderRadius.all(Radius.elliptical(5, 5))
@@ -122,8 +123,8 @@ class _CreateState extends State<CreateUser> {
                       keyboardType: TextInputType.phone,
                       decoration: InputDecoration(
 
-                          labelText: "Enter user's Mobile Number ",
-                          hintText: "Enter Moble Number",
+                          labelText: "Mobile Number ",
+                          hintText: "Moble Number",
                           focusedBorder: OutlineInputBorder(
                               borderRadius:
                                   BorderRadius.all(Radius.elliptical(5, 5)))),
@@ -153,7 +154,7 @@ class _CreateState extends State<CreateUser> {
                         }
                       },
                       decoration: InputDecoration(
-                        labelText: "Enter address line",
+                        labelText: "Address line",
                         focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(18),
                             borderSide:
@@ -183,12 +184,12 @@ class _CreateState extends State<CreateUser> {
                         }
                       },
                       decoration: InputDecoration(
-                        labelText: "Enter your landmark",
+                        labelText: "landmark",
                         focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(18),
                             borderSide:
                             BorderSide(width: 1.2, color: Colors.blue)),
-                        hintText: "Enter Pincode",
+                        hintText: "Pincode",
                       ),
                     ),
                   ),
@@ -213,7 +214,7 @@ class _CreateState extends State<CreateUser> {
                         }
                       },
                       decoration: InputDecoration(
-                        labelText: "Enter your city",
+                        labelText: "city",
                         focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(18),
                             borderSide:
@@ -243,12 +244,12 @@ class _CreateState extends State<CreateUser> {
                         }
                       },
                       decoration: InputDecoration(
-                        labelText: "Enter your state",
+                        labelText: "State",
                         focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(18),
                             borderSide:
                             BorderSide(width: 1.2, color: Colors.blue)),
-                        hintText: "Enter Pincode",
+                        hintText: "Pincode",
                       ),
                     ),
                   ),
@@ -273,13 +274,13 @@ class _CreateState extends State<CreateUser> {
                         }
                       },
                       decoration: InputDecoration(
-                        labelText: "Enter your pin",
+                        labelText: "Pin",
 
                         focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(18),
                             borderSide:
                             BorderSide(width: 1.2, color: Colors.blue)),
-                        hintText: "Enter n",
+                        hintText: "n",
                       ),
                     ),
                   ),
@@ -298,12 +299,16 @@ class _CreateState extends State<CreateUser> {
                         );
                       },
                       style: ButtonStyle(
+
                           shape:
                           MaterialStateProperty.all<RoundedRectangleBorder>(
                               RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10))),
                           fixedSize:
-                          MaterialStateProperty.all<Size>(Size(100, 25))),
+                          MaterialStateProperty.all<Size>(Size(100, 25))
+                      ),
+
+
                       child: Text(
                         "Create",
                         style: TextStyle(

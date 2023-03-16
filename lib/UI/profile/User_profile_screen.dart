@@ -1,9 +1,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
-import 'package:salon/UI/profile/update_screen.dart';
+import 'package:salon/UI/Owner_UI/O_Home_Page.dart';
+import 'package:salon/UI/profile/User_update_screen.dart';
+import 'package:salon/services/createshop.dart';
 
-import 'menu.dart';
+import 'User_menu.dart';
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key? key}) : super(key: key);
 
@@ -77,11 +79,8 @@ class ProfileScreen extends StatelessWidget {
 
                 /// -- MENU
                 ProfileMenuWidget(title: "Settings", icon: LineAwesomeIcons.cog, onPress: () {}),
-                ProfileMenuWidget(title: "Billing Details", icon: LineAwesomeIcons.wallet, onPress: () {}),
-                ProfileMenuWidget(title: "User Management", icon: LineAwesomeIcons.user_check, onPress: () {}),
-                const Divider(),
-                const SizedBox(height: 10),
-                ProfileMenuWidget(title: "Terms & conditions", icon: LineAwesomeIcons.info, onPress: () {}),
+                ProfileMenuWidget(title: "Hostory", icon: LineAwesomeIcons.history, onPress: () {}),
+                ProfileMenuWidget(title: "About", icon: LineAwesomeIcons.app_net, onPress: () {}),
                 ProfileMenuWidget(title: "Help", icon: LineAwesomeIcons.helping_hands, onPress: () {}),
                 ProfileMenuWidget(
                     title: "Logout",
@@ -89,6 +88,17 @@ class ProfileScreen extends StatelessWidget {
                     textColor: Colors.red,
                     endIcon: false,
                     onPress: () {}),
+                const Divider(),
+                const SizedBox(height: 10),
+                const SizedBox(
+                  child: Text('If you have an shop'),
+                ),
+                ProfileMenuWidget(title: "Switch To Onwer", icon: LineAwesomeIcons.info, onPress: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Create()),
+                  );
+                }),
               ],
             ),
           ),
